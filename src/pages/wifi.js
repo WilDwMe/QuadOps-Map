@@ -1,17 +1,16 @@
-import React from "react";
+import React from 'react';
 import { MapContainer, ZoomControl, TileLayer, LayersControl } from 'react-leaflet';
 
 const Wifi = () => {
-    return (
-<MapContainer
+  return (
+    <MapContainer
       center={[55.78996, 37.67941]}
       zoom={15}
       zoomControl={false}
-          maxZoom={17}
-          className="mapStyle"
-      >
+      maxZoom={17}
+      className="mapStyle">
       <ZoomControl position="topright" />
-          <LayersControl position="topright" collapsed={false}>
+      <LayersControl position="topright" collapsed={false}>
         <LayersControl.BaseLayer name="Basic Map">
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         </LayersControl.BaseLayer>
@@ -26,7 +25,7 @@ const Wifi = () => {
         </LayersControl.BaseLayer>
       </LayersControl>
     </MapContainer>
-    );
-}
+  );
+};
 
 export default Wifi;

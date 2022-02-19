@@ -4,17 +4,15 @@ import { MapContainer, ZoomControl, TileLayer, LayersControl, SVGOverlay } from 
 import Layers from './layers';
 
 const Map = () => {
-
   return (
     <MapContainer
       center={[55.78996, 37.67941]}
       zoom={15}
       zoomControl={false}
-          maxZoom={17}
-          className="mapStyle"
-      >
+      maxZoom={17}
+      className="mapStyle">
       <ZoomControl position="topright" />
-          <LayersControl position="topright" collapsed={false}>
+      <LayersControl position="topright" collapsed={false}>
         <LayersControl.BaseLayer checked name="Basic Map">
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         </LayersControl.BaseLayer>
