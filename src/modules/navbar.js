@@ -33,6 +33,9 @@ export const Navbar = () => (
             </NavLink>
           </li>
         </ul>
+
+        <a href="https://github.com/WilDwMe/QuadOps-Map"><i class="bi bi-github" style={{fontSize: '1.5rem', color: 'white'}}></i></a>
+        <span>&nbsp; &nbsp;</span>
         <a href="https://codeclimate.com/github/WilDwMe/QuadOps-Map/maintainability">
           <img
             alt="CodeClimate Badge"
@@ -40,12 +43,12 @@ export const Navbar = () => (
           />
         </a>
         <span>&nbsp; &nbsp;</span>
-        <a href="https://github.com/WilDwMe/QuadOps-Map">
+        {/* <a href="/">
           <img
             alt="GitHub package.json version (subfolder of monorepo)"
             src="https://img.shields.io/github/package-json/v/WilDwMe/QuadOps-Map?color=g&filename=package.json"
           />
-        </a>
+        </a> */}
       </div>
     </div>
   </nav>

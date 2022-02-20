@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 @import "~bootstrap/scss/bootstrap";
+@import '~react-leaflet-markercluster/dist/styles.min.css';
 
 body {
   margin: 0;
@@ -18,4 +19,7 @@ code {
 .mapStyle {
   height: calc(100vh - 56px);
   width: 100%;
+}
+.markercluster-map {
+  height: 90vh;
 }

@@ -5,19 +5,22 @@ import uniqid from 'uniqid';
 
 import mapDataSmall from '../data/rodents.json';
 import mapDataEntrances from '../data/entrance_basm.json';
+import MarkerClusterGroup from 'react-leaflet-markercluster';
 
 const Layers = () => {
+
   const orangeIcon = L.icon({
-    iconUrl: require('../images/orange.png'),
-    iconSize: [18, 18],
-    iconAnchor: [12, 40],
+    iconUrl: require('../images/newOrange.png'),
+    iconSize: [15, 15],
+    iconAnchor: [1, 3],
   });
 
   const blueIcon = L.icon({
-    iconUrl: require('../images/blue.png'),
-    iconSize: [18, 18],
-    iconAnchor: [12, 40],
+    iconUrl: require('../images/newBlue.png'),
+    iconSize: [15, 15],
+    iconAnchor: [1, 3],
   });
+
 
   // useEffect(()=> {
   //   console.log(map);
@@ -38,18 +41,22 @@ const Layers = () => {
       <LayersControl position="topright">
         <LayersControl.Overlay checked name="Данные по сокольникам">
           <LayerGroup>
+          <MarkerClusterGroup>
             {mapDataSmall.features.map((item) => {
               const [lat, lon] =
                 item.geometry.type === 'Point' ? item.geometry.coordinates : [0, 0];
               return <Marker key={uniqid()} icon={blueIcon} position={[lon, lat]}></Marker>;
             })}
+              </MarkerClusterGroup>
           </LayerGroup>
         </LayersControl.Overlay>
         <LayersControl.Overlay checked name="Подъезды">
           <LayerGroup>
+          <MarkerClusterGroup>
             {mapDataEntrances.features.map((item) => {
               const [lat, lon] = item.geometry.coordinates;
               return (
+                
                 <Marker key={uniqid()} position={[lon, lat]} icon={orangeIcon}>
                   <Popup position={[lon, lat]}>
                     <div style={{ lineHeight: 1 }}>
@@ -63,9 +70,11 @@ const Layers = () => {
                       </p>
                     </div>
                   </Popup>
-                </Marker>
+                  </Marker>
+                 
               );
             })}
+               </MarkerClusterGroup>
           </LayerGroup>
         </LayersControl.Overlay>
       </LayersControl>
