@@ -9,8 +9,8 @@ const Map = () => {
       center={[55.78996, 37.67941]}
       zoom={15}
       zoomControl={false}
-      maxZoom={17}
-      className="mapStyle">
+      maxZoom={18}
+      className="mapStyle markercluster-map">
       <ZoomControl position="topright" />
       <LayersControl position="topright" collapsed={false}>
         <LayersControl.BaseLayer checked name="Basic Map">

@@ -24,7 +24,7 @@ export const Navbar = () => (
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/wifi">
-              ESP
+              WiFi
             </NavLink>
           </li>
           <li className="nav-item">
@@ -34,7 +34,7 @@ export const Navbar = () => (
           </li>
         </ul>
 
-        <a href="https://github.com/WilDwMe/QuadOps-Map"><i class="bi bi-github" style={{fontSize: '1.5rem', color: 'white'}}></i></a>
+        <a href="https://github.com/WilDwMe/QuadOps-Map"><i className="bi bi-github" style={{fontSize: '1.5rem', color: 'white'}}></i></a>
         <span>&nbsp; &nbsp;</span>
         <a href="https://codeclimate.com/github/WilDwMe/QuadOps-Map/maintainability">
           <img
