@@ -1,7 +1,7 @@
 import React from 'react';
-import { MapContainer, ZoomControl, TileLayer, LayersControl, SVGOverlay } from 'react-leaflet';
+import { MapContainer, ZoomControl, TileLayer, LayersControl} from 'react-leaflet';
 
-import Layers from './layers';
+import Layers from './Layers';
 
 const Map = () => {
   return (
