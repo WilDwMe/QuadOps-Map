@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from '../images/favicon-32x32.png';
 
 export const Navbar = () => (
   <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
     <div className="container-fluid">
-      <div className="navbar-brand">QuadOps Maps</div>
+    <img src={Logo} alt="" width="32" height="32"></img>
+      <div className="navbar-brand" style={{paddingLeft: 10}}>QuadOps</div>
       <button
         className="navbar-toggler"
         type="button"
