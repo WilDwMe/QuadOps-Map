@@ -12,7 +12,20 @@ export const DataOverlay = ({data, name, icon}) => {
             {data.features.map((item) => {
               const [lat, lon] =
                 item.geometry.type === 'Point' ? item.geometry.coordinates : [0, 0];
-              return <Marker key={uniqid()} icon={icon} position={[lon, lat]}></Marker>;
+                return <Marker key={uniqid()} icon={icon} position={[lon, lat]}>
+                <Popup position={[lon, lat]}>
+                      <div style={{ lineHeight: 1 }}>
+                        <h3>{item.properties.time}</h3>
+                        <p>
+                          {'Адрес: ' + item.properties.Address}
+                          <br />
+                          {'Всего квартир: ' + item.properties.Flats}
+                          <br />
+                          {'UNOM: ' + item.properties.UNOM}
+                        </p>
+                      </div>
+                    </Popup>
+                </Marker>;
             })}
               </MarkerClusterGroup>
             </LayerGroup>
