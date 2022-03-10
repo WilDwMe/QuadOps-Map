@@ -26,3 +26,21 @@ code {
 .popup-title {
   font-size: medium;
 }
+.switch {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  padding: 10px;
+  z-index: 400;
+}
+
+.leaflet-control,
+.leaflet-control-zoom-in {
+  background: #495057;
+  color: white;
+}
+
+.leaflet-control-zoom .leaflet-control-zoom-in .leaflet-control-zoom-out {
+  background: #495057;
+  color: white;
+}

@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#others
+labelTemp.psd
+
 # testing
 /coverage
 

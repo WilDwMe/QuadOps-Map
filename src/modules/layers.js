@@ -12,7 +12,7 @@ import entranceBasmBt2 from '../data/entranceBasmBt2.json';
 import entranceBasmBt1 from '../data/entranceBasmBt1.json';
 import entranceBasmBt0 from '../data/entranceBasmBt0.json';
 
-const Layers = () => {
+const Layers = ({clusterActive}) => {
   return (
     <>
       <LayersControl position="topright">

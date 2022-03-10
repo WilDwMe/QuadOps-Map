@@ -6,7 +6,7 @@ export const Navbar = () => (
   <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
     <div className="container-fluid">
     <img src={Logo} alt="" width="32" height="32"></img>
-      <div className="navbar-brand" style={{paddingLeft: 10}}>QuadOps</div>
+      <div className="navbar-brand" style={{paddingLeft: 10}}>YomBox</div>
       <button
         className="navbar-toggler"
         type="button"
