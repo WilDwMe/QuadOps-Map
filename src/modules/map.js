@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapContainer, ZoomControl, TileLayer, LayersControl } from 'react-leaflet';
+import { fetchWifiPoints } from '../Slices/wifiSlice';
 import ToggleButton from '../Components/ToggleButton';
+import { useDispatch } from 'react-redux';
 
 import Layers from './Layers';
 
 const Map = () => {
+  
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchWifiPoints());
+},[dispatch]);
 
   return (
     <MapContainer
