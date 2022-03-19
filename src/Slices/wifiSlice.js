@@ -4,12 +4,11 @@ import axios from "axios";
 export const fetchWifiPoints = createAsyncThunk(
     'wifi/fetchPoints',
     async() => {
-        const response = await axios.get('http://yombox.ru/assoc.geojson');
+        const response = await axios.get('http://yombox.ru/data/assoc.geojson');
         return response;
     }
 );
 
-// const wifiAdapter = createEntityAdapter();
 const initialState = ({ loading: 'idle', error: null });
 
 const wifiSlice = createSlice({
@@ -21,13 +20,7 @@ const wifiSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchWifiPoints.fulfilled, (state, { payload }) => {
-                // // console.log(payload.data)
-                // const features = payload.data.features;
-                // const data = );
-
-                // wifiAdapter.addMany(state, features.map((item) => ({ id: item.properties.mob, ...item })));
                 state.features = payload.data.features;
-                // state.ids = Object.keys(payload.data.features);
                 state.loading = 'loaded';
             })
             .addCase(fetchWifiPoints.pending, (state) => {
@@ -41,5 +34,4 @@ const wifiSlice = createSlice({
     }
 });
 
-// export const selectors = wifiAdapter.getSelectors((state) => state.wifi);
 export default wifiSlice.reducer;

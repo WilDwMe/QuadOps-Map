@@ -26,7 +26,12 @@ export const Navbar = () => (
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/wifi">
-              WiFi
+              Heatmap
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/wifi-realtime">
+              Socket's console
             </NavLink>
           </li>
           <li className="nav-item">
