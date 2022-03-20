@@ -31,7 +31,7 @@ export const WifiRealtime = () => {
     socket.onerror = () => {
       console.log('Socket произошла ошибка')
     }
-  }, [])
+  }, [socket])
 
   const sendMessage = async () => {
     const message = {
