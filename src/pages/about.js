@@ -8,7 +8,7 @@ const About = () => {
                 <p className="lead">Здесь могло бы быть какое то описание</p>
                 <hr className="my-4"/>
                     <p>Но к сожалению на данный момент в голову ничего не приходит</p>
-                    <a className="btn btn-primary btn-sm" href="/" role="button">Go back to the Map</a>
+                    <a className="btn btn-primary btn-sm" href="/" role="button"> Go back to the Map </a>
             </div>
         </div>  
     );
