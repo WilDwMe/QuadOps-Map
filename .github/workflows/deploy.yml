@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: action/checkout@v2
+      - uses: action/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version}}
+    # Setup key
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.key }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
+    # Build
+      - run: npm ci
+      - run: npm run build
+    # Deploy
+      - run: cd build && rsync -e "ssh -p 20022 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . 80-78-247-137.cloudvps.regruhosting.ru:/home/apps/QuadOps-map
