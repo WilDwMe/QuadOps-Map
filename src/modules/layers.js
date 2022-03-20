@@ -1,7 +1,7 @@
 import React from 'react';
 import { LayersControl } from 'react-leaflet';
 import { blueIcon, orangeTwo, pink, violet, lightBlue, darkBlue, orangeRed} from './icons';
-import { DataOverlay } from './DataOverlay';
+import { DataOverlay } from './dataOverlay';
 // import mapDataSmall from '../data/rodents.json';
 // import mapDataEntrances from '../data/entrance_basm.json';
 import entranceBasmSt from '../data/entranceBasmSt.json';

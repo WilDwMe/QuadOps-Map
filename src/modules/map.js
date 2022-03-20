@@ -4,7 +4,7 @@ import { fetchWifiPoints } from '../Slices/wifiSlice';
 import ToggleButton from '../Components/ToggleButton';
 import { useDispatch } from 'react-redux';
 
-import Layers from './Layers';
+import Layers from './layers';
 
 const Map = () => {
   

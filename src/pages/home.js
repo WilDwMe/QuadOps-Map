@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from '../modules/Map';
+import Map from '../modules/map';
 import { Container } from '@mui/material';
 
 const Home = () => {
