@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayersControl } from 'react-leaflet';
-import { blueIcon, orangeTwo, pink, violet, lightBlue, darkBlue, orangeRed} from './icons';
+import { blueIcon } from './icons';
 import { WifiDataOverlay } from './wifiDataOverlay';
 // import mapDataSmall from '../data/rodents.json';
 // import mapDataEntrances from '../data/entrance_basm.json';

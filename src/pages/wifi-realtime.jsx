@@ -31,18 +31,18 @@ export const WifiRealtime = () => {
     socket.onerror = () => {
       console.log('Socket произошла ошибка')
     }
-  }, [socket])
+  }, [])
 
-  const sendMessage = async () => {
-    const message = {
-      text: value,
-      id: Date.now(),
-      event: 'message',
-    }
-    socket.send(JSON.stringify(message))
-    console.log(JSON.stringify(message))
-    setValue('')
-  }
+  // const sendMessage = async () => {
+  //   const message = {
+  //     text: value,
+  //     id: Date.now(),
+  //     event: 'message',
+  //   }
+  //   socket.send(JSON.stringify(message))
+  //   console.log(JSON.stringify(message))
+  //   setValue('')
+  // }
 
   const color = status === 'OFFLINE' ? 'yellow' : 'olive'
 
