@@ -8,7 +8,7 @@ export const DataOverlay = ({ data, name, icon }) => {
 
   const active = useSelector((state) => state.map.clusters);
 
-// it's should be refactored below asap...
+// it's should be refactored below asap... Cluster component.
   
   return (
     active ? (
