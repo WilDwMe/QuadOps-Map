@@ -3,6 +3,7 @@
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
         "rootDir": "src",
         "outDir": "build",
+        "baseUrl": "."
   },
     /* Language and Environment */
     "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
