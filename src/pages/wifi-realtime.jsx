@@ -5,7 +5,7 @@ import moment from 'moment'
 
 export const WifiRealtime = () => {
   const [messages, setMessages] = useState([])
-  const [value, setValue] = useState('')
+  // const [value, setValue] = useState('')
   const [status, setStatus] = useState('OFFLINE')
   // const socket = useRef()
   const socket = new WebSocket('ws://localhost:3500')
