@@ -44,8 +44,6 @@ export const WifiRealtime = () => {
     setValue('')
   }
 
-  // console.log(messages)
-
   const color = status === 'OFFLINE' ? 'yellow' : 'olive'
 
   if (messages.length >= 10) {
