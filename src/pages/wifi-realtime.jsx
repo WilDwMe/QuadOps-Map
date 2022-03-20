@@ -8,6 +8,7 @@ export const WifiRealtime = () => {
   // const [value, setValue] = useState('')
   const [status, setStatus] = useState('OFFLINE')
   // const socket = useRef()
+
   const socket = new WebSocket('ws://localhost:3500')
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export const WifiRealtime = () => {
     socket.onerror = () => {
       console.log('Socket произошла ошибка')
     }
-  }, [])
+  }, [socket])
 
   // const sendMessage = async () => {
   //   const message = {
