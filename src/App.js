@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './modules/Navbar';
-import Home from './pages/home';
-import Wifi from './pages/wifi';
-import About from './pages/about';
+import Navbar from '../modules/Navbar';
+import Home from '../pages/home';
+import Wifi from '../pages/wifi';
+import About from '../pages/about';
 import { WifiRealtime } from './pages/wifi-realtime';
 
 function App() {
