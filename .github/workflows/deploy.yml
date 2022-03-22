@@ -25,7 +25,7 @@ jobs:
       - run: npm ci
       - run: npm run build
     # Deploy
-      - run: ssh -p 22 -vvvv -i $HOME/.ssh/key -o StrictHostKeyChecking=no -o KexAlgorithms=diffie-hellman-group14-sha1 root@80-78-247-137.cloudvps.regruhosting.ru
+      - run: cd build && rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no -o KexAlgorithms=diffie-hellman-group14-sha1" --archive --progress --compress --delete . root@80-78-247-137.cloudvps.regruhosting.ru:/home/apps/QuadOps-map
 
 # cd build && rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no -o KexAlgorithms=diffie-hellman-group14-sha1" --archive --compress --delete . root@80-78-247-137.cloudvps.regruhosting.ru:/home/apps/QuadOps-map
 
