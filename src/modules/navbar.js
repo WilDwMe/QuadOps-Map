@@ -24,14 +24,19 @@ export const Navbar = () => (
               Areas
             </NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/wifi">
+          {/* <li className="nav-item">
+            <NavLink className="nav-link" to="/heatmap">
               Heatmap
             </NavLink>
-          </li>
+          </li> */}
           <li className="nav-item">
             <NavLink className="nav-link" to="/wifi-realtime">
               Socket's console
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/boom">
+            Boomstarter
             </NavLink>
           </li>
           <li className="nav-item">
